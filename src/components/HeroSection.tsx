@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 
 const HeroSection = () => {
@@ -24,14 +25,18 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="hero" size="lg" className="group">
-              Agendar Reunião
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="lg" className="group">
-              <Play className="mr-2 h-5 w-5" />
-              Ver Como Funciona
-            </Button>
+            <Link to="/agendar-reuniao">
+              <Button variant="hero" size="lg" className="group">
+                Agendar Reunião
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link to="/como-funciona">
+              <Button variant="outline" size="lg" className="group">
+                <Play className="mr-2 h-5 w-5" />
+                Ver Como Funciona
+              </Button>
+            </Link>
           </div>
 
           {/* Stats */}
