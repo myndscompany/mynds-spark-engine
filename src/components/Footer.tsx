@@ -1,10 +1,24 @@
 import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname === '/') {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/#' + id);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
   };
 
@@ -14,12 +28,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-fast">
               <div className="w-8 h-8 gradient-brand rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-sm">M</span>
               </div>
               <span className="text-xl font-bold text-foreground">Mynds Company</span>
-            </div>
+            </Link>
             <p className="text-muted-foreground text-sm">
               Marketing estratégico e desenvolvimento de tecnologia 
               para escalar seu negócio digital.

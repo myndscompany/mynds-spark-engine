@@ -1,14 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname === '/') {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/#' + id);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
     setIsMenuOpen(false);
   };
@@ -18,12 +31,12 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-fast">
             <div className="w-8 h-8 gradient-brand rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">M</span>
             </div>
             <span className="text-xl font-bold text-foreground">Mynds Company</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -52,9 +65,11 @@ const Header = () => {
             <Button variant="outline" size="sm">
               Login
             </Button>
-            <Button variant="gold" size="sm">
-              Agendar Reunião
-            </Button>
+            <Link to="/agendar-reuniao">
+              <Button variant="gold" size="sm">
+                Agendar Reunião
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,9 +107,11 @@ const Header = () => {
                 <Button variant="outline" size="sm">
                   Login
                 </Button>
-                <Button variant="gold" size="sm">
-                  Agendar Reunião
-                </Button>
+                <Link to="/agendar-reuniao">
+                  <Button variant="gold" size="sm">
+                    Agendar Reunião
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>
