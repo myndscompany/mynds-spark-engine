@@ -17,6 +17,8 @@ import AgendarReuniao from "./pages/AgendarReuniao";
 import NotFound from "./pages/NotFound";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import AreaDoCliente from "./pages/AreaDoCliente";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 
 const queryClient = new QueryClient();
@@ -29,17 +31,25 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            {/* Todas as rotas dentro deste grupo terão Header e Footer */}
             <Route element={<Layout />}>
+              {/* Rotas Públicas */}
               <Route path="/" element={<Index />} />
               <Route path="/como-funciona" element={<ComoFunciona />} />
               <Route path="/agendar-reuniao" element={<AgendarReuniao />} />
               <Route path="/cadastro" element={<Register />} />
               <Route path="/login" element={<Login />} />
+
+              {/* 2. Adicione a nova Rota Protegida aqui */}
+              <Route 
+                path="/area-do-cliente" 
+                element={
+                  <ProtectedRoute>
+                    <AreaDoCliente />
+                  </ProtectedRoute>
+                } 
+              />
             </Route>
 
-            {/* Rotas que NÃO devem ter o layout (se houver alguma) podem ficar aqui fora */}
-            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
@@ -49,4 +59,3 @@ const App = () => (
 );
 
 export default App;
-
