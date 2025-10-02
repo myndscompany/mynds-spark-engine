@@ -154,7 +154,7 @@ const AgendarReuniao = () => {
                   className="w-full gap-2 text-lg"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  Enviar via WhatsApp
+                  Agendar reunião
                 </Button>
               </form>
             </div>
@@ -162,7 +162,7 @@ const AgendarReuniao = () => {
             {/* Info & Direct WhatsApp */}
             <div className="space-y-6">
               {/* Direct WhatsApp Card */}
-              <div className="glass-card p-8 bg-gradient-to-br from-primary/10 to-accent/10">
+              <div className="glass-card p-8 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl">
                 <div className="flex items-center gap-3 mb-4">
                   <MessageCircle className="w-8 h-8 text-accent" />
                   <h3 className="text-2xl font-bold text-foreground">
@@ -224,7 +224,7 @@ const AgendarReuniao = () => {
                 </div>
               </div>
 
-              <div className="glass-card p-6 bg-gradient-to-br from-accent/10 to-primary/10">
+              <div className="glass-card p-6 bg-gradient-to-br from-accent/10 to-primary/10 rounded-2xl">
                 <p className="text-center text-foreground font-semibold text-lg">
                   🚀 Vagas limitadas para novos projetos este mês. Garanta sua
                   reunião agora!
