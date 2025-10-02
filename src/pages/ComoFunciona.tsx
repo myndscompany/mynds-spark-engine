@@ -7,25 +7,25 @@ import { Link } from "react-router-dom";
 const ComoFunciona = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Veja Como <span className="gradient-text">Transformamos</span> Seu Negócio
+              Veja Como <span className="gradient-text">Transformamos</span> Seu
+              Negócio
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Descubra o processo completo que une marketing estratégico e tecnologia de ponta para gerar resultados mensuráveis.
+              Descubra o processo completo que une marketing estratégico e
+              tecnologia de ponta para gerar resultados mensuráveis.
             </p>
           </div>
 
           {/* Video Container */}
           <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden shadow-elegant mb-12 group">
             <div className="absolute inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="gold"
                 className="gap-3 text-lg px-8 py-6 h-auto"
               >
@@ -43,9 +43,12 @@ const ComoFunciona = () => {
               <div className="w-16 h-16 rounded-full gradient-gold flex items-center justify-center text-2xl font-bold text-accent-foreground mx-auto mb-4">
                 1
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Diagnóstico Profundo</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Diagnóstico Profundo
+              </h3>
               <p className="text-muted-foreground">
-                Analisamos cada detalhe do seu negócio para identificar oportunidades de crescimento exponencial.
+                Analisamos cada detalhe do seu negócio para identificar
+                oportunidades de crescimento exponencial.
               </p>
             </div>
 
@@ -53,9 +56,12 @@ const ComoFunciona = () => {
               <div className="w-16 h-16 rounded-full gradient-gold flex items-center justify-center text-2xl font-bold text-accent-foreground mx-auto mb-4">
                 2
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Estratégia Customizada</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Estratégia Customizada
+              </h3>
               <p className="text-muted-foreground">
-                Desenvolvemos uma solução única que combina marketing de performance com automação inteligente.
+                Desenvolvemos uma solução única que combina marketing de
+                performance com automação inteligente.
               </p>
             </div>
 
@@ -63,9 +69,12 @@ const ComoFunciona = () => {
               <div className="w-16 h-16 rounded-full gradient-gold flex items-center justify-center text-2xl font-bold text-accent-foreground mx-auto mb-4">
                 3
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Resultados Comprovados</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Resultados Comprovados
+              </h3>
               <p className="text-muted-foreground">
-                Implementamos, otimizamos e escalamos até você ver os números crescerem consistentemente.
+                Implementamos, otimizamos e escalamos até você ver os números
+                crescerem consistentemente.
               </p>
             </div>
           </div>
@@ -78,13 +87,26 @@ const ComoFunciona = () => {
                 Chega de Perder Tempo e Dinheiro
               </h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Enquanto você assiste, seus concorrentes estão fechando negócios. 
-                <span className="text-accent font-semibold"> Não fique para trás.</span> 
-                <br />Agende agora e descubra como podemos <span className="gradient-text font-bold">multiplicar seus resultados</span> nos próximos 90 dias.
+                Enquanto você assiste, seus concorrentes estão fechando
+                negócios.
+                <span className="text-accent font-semibold">
+                  {" "}
+                  Não fique para trás.
+                </span>
+                <br />
+                Agende agora e descubra como podemos{" "}
+                <span className="gradient-text font-bold">
+                  multiplicar seus resultados
+                </span>{" "}
+                nos próximos 90 dias.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/agendar-reuniao">
-                  <Button size="lg" variant="gold" className="gap-2 text-lg px-8">
+                  <Button
+                    size="lg"
+                    variant="gold"
+                    className="gap-2 text-lg px-8"
+                  >
                     Agendar Minha Reunião Agora
                     <ArrowRight className="w-5 h-5" />
                   </Button>
@@ -99,8 +121,6 @@ const ComoFunciona = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
