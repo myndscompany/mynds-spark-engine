@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -46,16 +46,29 @@
     --radius: 0.75rem;
 
     /* Custom Mynds Tokens */
-    --gradient-brand: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--accent)), hsl(45 86% 75%));
+    --gradient-brand: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--primary-glow))
+    );
+    --gradient-gold: linear-gradient(
+      135deg,
+      hsl(var(--accent)),
+      hsl(45 86% 75%)
+    );
     --gradient-dark: linear-gradient(180deg, hsl(220 25% 6%), hsl(220 25% 4%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 25% 6%) 0%, hsl(258 30% 12%) 50%, hsl(220 25% 6%) 100%);
-    
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(220 25% 6%) 0%,
+      hsl(258 30% 12%) 50%,
+      hsl(220 25% 6%) 100%
+    );
+
     /* Shadows */
     --shadow-elegant: 0 20px 40px -10px hsl(var(--primary) / 0.3);
     --shadow-gold: 0 10px 30px -5px hsl(var(--accent) / 0.2);
     --shadow-card: 0 8px 32px -8px hsl(220 25% 4% / 0.6);
-    
+
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.2s ease-out;
@@ -130,46 +143,67 @@
   .gradient-brand {
     background: var(--gradient-brand);
   }
-  
+
   .gradient-gold {
     background: var(--gradient-gold);
   }
-  
+
   .gradient-hero {
     background: var(--gradient-hero);
   }
-  
+
   .shadow-elegant {
     box-shadow: var(--shadow-elegant);
   }
-  
+
   .shadow-gold {
     box-shadow: var(--shadow-gold);
   }
-  
+
   .shadow-card {
     box-shadow: var(--shadow-card);
   }
-  
+
   .transition-smooth {
     transition: var(--transition-smooth);
   }
-  
+
   .transition-fast {
     transition: var(--transition-fast);
   }
-  
+
   .text-gradient-brand {
     background: var(--gradient-brand);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .text-gradient-gold {
     background: var(--gradient-gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+}
+@keyframes gradientBackground {
+  0% {
+    background: hsl(240, 10%, 4%);
+  } /* fundo original: quase preto */
+  25% {
+    background: hsl(260, 15%, 6%);
+  } /* preto com roxo bem leve */
+  50% {
+    background: hsl(261, 39%, 17%);
+  } /* roxo bem escuro */
+  75% {
+    background: hsl(260, 47%, 34%);
+  } /* roxo mais perceptível */
+  100% {
+    background: hsl(240, 10%, 4%);
+  } /* volta pro original */
+}
+
+.bg-animated {
+  animation: gradientBackground 22s ease-in-out infinite;
 }
