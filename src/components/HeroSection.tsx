@@ -11,8 +11,8 @@ const HeroSection = () => {
       id="hero"
       className="relative w-full min-h-screen flex items-center justify-center bg-animated"
     >
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-        {/* Content */}
+      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        {/* Conteúdo Principal (z-10 para ficar acima das decorações) */}
         <div className="space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
@@ -31,8 +31,11 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
-            {/* Botão Agendar Reunião */}
-            <Link to="/agendar-reuniao" className="w-full sm:w-auto">
+            {/* Botão Agendar Reunião - CORREÇÃO: Adicionado relative z-20 para prioridade de clique */}
+            <Link
+              to="/agendar-reuniao"
+              className="block w-full sm:w-auto **relative z-20**"
+            >
               <Button
                 variant="hero"
                 size="lg"
@@ -44,7 +47,10 @@ const HeroSection = () => {
             </Link>
 
             {/* Botão Ver Como Funciona */}
-            <Link to="/como-funciona" className="w-full sm:w-auto">
+            <Link
+              to="/como-funciona"
+              className="w-full sm:w-auto relative z-20"
+            >
               <Button
                 variant="outline"
                 size="lg"
@@ -78,18 +84,18 @@ const HeroSection = () => {
 
         {/* Image */}
         <div className="relative">
-          <div className="absolute inset-0 gradient-brand rounded-3xl blur-3xl opacity-20"></div>
+          <div className="absolute inset-0 gradient-brand rounded-3xl blur-3xl opacity-20 z-0"></div>
           <img
             src={heroImage}
             alt="Equipe Mynds Company trabalhando em projetos de tecnologia e marketing"
-            className="relative rounded-3xl shadow-card w-full h-auto"
+            className="relative rounded-3xl shadow-card w-full h-auto z-10"
           />
         </div>
       </div>
 
-      {/* Background decoration */}
-      <div className="absolute top-20 right-20 w-72 h-72 gradient-brand rounded-full blur-3xl opacity-10"></div>
-      <div className="absolute bottom-20 left-20 w-56 h-56 gradient-gold rounded-full blur-3xl opacity-10"></div>
+      {/* Background decoration (Linhas 91 e 92 - Descomentadas e com z-index baixo) */}
+      <div className="absolute top-20 right-20 w-72 h-72 gradient-brand rounded-full blur-3xl opacity-10 **z-0**"></div>
+      <div className="absolute bottom-20 left-20 w-56 h-56 gradient-gold rounded-full blur-3xl opacity-10 **z-0**"></div>
     </section>
   );
 };
