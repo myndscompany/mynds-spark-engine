@@ -207,3 +207,7 @@
 .bg-animated {
   animation: gradientBackground 22s ease-in-out infinite;
 }
+
+.bg-login-image {
+  background-image: url("assets/wallpaper-final.svg");
+}
