@@ -153,18 +153,21 @@ const Footer = () => {
             © 2025 Mynds Company. Todos os direitos reservados.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a
-              href="#"
+            {/* LINK CORRIGIDO: Política de Privacidade */}
+            <Link
+              to="/politica-de-privacidade" // Aponta para a nova rota
               className="text-muted-foreground hover:text-primary transition-fast text-sm"
             >
               Política de Privacidade
-            </a>
-            <a
-              href="#"
+            </Link>
+
+            {/* LINK CORRIGIDO: Termos de Uso */}
+            <Link
+              to="/termos-de-uso" // Aponta para a nova rota
               className="text-muted-foreground hover:text-primary transition-fast text-sm"
             >
               Termos de Uso
-            </a>
+            </Link>
           </div>
         </div>
       </div>
