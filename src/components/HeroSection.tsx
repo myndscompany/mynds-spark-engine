@@ -17,10 +17,10 @@ const HeroSection = () => {
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               Marketing que <span className="text-gradient-brand">Pensa</span>.{" "}
+              {/* <br />
+              Tecnologia que <span className="text-gradient-gold">Executa</span> */}
               <br />
-              Tecnologia que <span className="text-gradient-gold">Executa</span>
-              . <br />
-              Resultados que <span className="text-primary-glow">Falam</span>.
+              Resultados que <span className="text-gradient-gold">Falam</span>.
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl">
               Integramos estratégias de marketing digital com desenvolvimento de

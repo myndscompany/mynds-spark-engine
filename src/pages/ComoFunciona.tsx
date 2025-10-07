@@ -80,8 +80,8 @@ const ComoFunciona = () => {
           </div>
 
           {/* Aggressive CTA Section */}
-          <div className="glass-card p-12 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20" />
+          <div className="glass-card p-12 text-center relative overflow-hidden border border-border rounded-2xl shadow-elegant">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-2xl" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
                 Chega de Perder Tempo e Dinheiro
